@@ -3,27 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Hero Ritik | Hacker Attitude</title>
-  <meta name="description" content="Hero Ritik | Hacker Attitude - Portfolio showcasing cybersecurity, web & app development, and more.">
+  <title>Profile Page</title>
+  
+  <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|New+Rocker" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: #000;
-      font-family: 'Arial', sans-serif;
       color: white;
+      font-family: 'Arial', sans-serif;
       overflow: auto;
-      cursor: url('https://cur.cursors-4u.net/symbols/sym-1/sym19.cur'), auto;
+      text-align: center;
     }
+
     canvas {
       position: fixed;
       top: 0;
       left: 0;
       z-index: -1;
     }
+
     #visitCounter {
       position: fixed;
       top: 10px;
@@ -31,143 +34,145 @@
       font-size: 16px;
       color: white;
     }
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .sidenav, .navbar-top {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .profile img {
+
+    .profile-image img {
       border-radius: 50%;
+      border: 4px solid red;
+      box-shadow: 0 0 15px red;
+      transition: transform 0.3s ease;
     }
+
+    .profile-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .title {
+      font-family: 'New Rocker', cursive;
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 0px 0px 10px red;
+      margin-top: 20px;
+    }
+
+    .sidenav {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
     .name, .job {
       margin-top: 10px;
-      text-align: center;
+      font-size: 1.2em;
     }
+
     .main {
       padding: 20px;
-      width: 90%;
-      max-width: 900px;
     }
+
     .card {
       background-color: #111;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 255, 0, 0.2);
-      margin-bottom: 20px;
+      border-radius: 10px;
+      margin: 15px auto;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
+
     .card-body {
       padding: 20px;
     }
+
+    h2 {
+      margin-bottom: 10px;
+      color: orange;
+    }
+
     table {
       width: 100%;
-      margin-top: 10px;
+      color: white;
     }
+
     table td {
-      padding: 8px;
-      border-bottom: 1px solid #444;
+      padding: 10px;
     }
-    .social-media {
-      font-size: 24px;
-      margin-top: 10px;
-    }
+
     .social-media i {
-      margin: 0 10px;
+      font-size: 30px;
+      margin: 10px;
       cursor: pointer;
+      transition: 0.3s;
     }
-    .scroll-text {
-      overflow: hidden;
-      white-space: nowrap;
-      display: block;
-      animation: scroll-left 15s linear infinite;
+
+    .social-media i:hover {
+      transform: scale(1.2);
     }
-    @keyframes scroll-left {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
+
     @media (max-width: 768px) {
-      .profile img {
-        width: 200px;
-        height: 200px;
-      }
-      .card-body {
-        padding: 10px;
+      .card {
+        width: 90%;
       }
     }
   </style>
 </head>
-
 <body onclick="playAudio();">
+
   <div id="visitCounter"></div>
 
-  <div class="content">
-    <div class="navbar-top">
-      <div class="title">
-        <h1 style="font-family:'New Rocker'; color: white; text-shadow: 0px 4px 14px red;">HACKER ATTITUDE</h1>
-      </div>
-    </div>
+  <div class="title">HACKER ATTITUDE</div>
 
-    <div class="content">
-      <div class="profile-image">
-        <img src="https://i.ibb.co/WNG522B/avatar.jpg" alt="Profile Image" width="300" height="300">
-      </div>
-
-      <div class="sidenav">
-        <div class="profile">
-          <div class="name">-----------------------------------------------------</div>
-          <div class="name">Learning:</div>
-          <div class="job">Web Developer</div>
-          <div class="job">App Developer</div>
-          <div class="job">Cyber Security</div>
-          <div class="name">-----------------------------------------------------</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="main">
-      <div class="card">
-        <div class="card-body">
-          <h2><b>IDENTITY</b></h2>
-          <table>
-            <tr><td><b>Name</b></td><td>:</td><td style="color: Red;"><b>Hero Ritik</b></td></tr>
-            <tr><td><b>Email</b></td><td>:</td><td style="color: Red;"><b>ritikkumarpandit7@gmail.com</b></td></tr>
-            <tr><td><b>Address</b></td><td>:</td><td style="color: Red;"><b>India, Bihar</b></td></tr>
-            <tr><td><b>Hobbies</b></td><td>:</td><td style="color: Red;"><b>Using Phone and Hacking Games</b></td></tr>
-            <tr><td><b>Skill</b></td><td>:</td><td><span class="scroll-text" style="color: red;"><b>PHP, HTML, CSS, Java, C++, Node, Bash</b></span></td></tr>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h2><b>Some Useful Websites:</b></h2>
-          <table>
-            <tr><td><b><a href="https://mr-risov.github.io/blog" target="_blank" style="color:lightgreen;">Blog</a></b></td><td>:</td><td style="color: red;"><b>You can learn new things for free.</b></td></tr>
-            <tr><td><b><a href="https://mr-risov.github.io/flysian-Store" target="_blank" style="color:lightgreen;">Store</a></b></td><td>:</td><td style="color: red;"><b>You can buy tools, software, courses, etc.</b></td></tr>
-            <tr><td><b><a href="https://mr-risov.github.io/socialservices/" target="_blank" style="color:lightgreen;">Panel</a></b></td><td>:</td><td style="color: red;"><b>You can buy followers, likes, comments, etc.</b></td></tr>
-          </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h2>SOCIAL MEDIA</h2>
-          <div class="social-media">
-            <a href="https://instagram.com/heroritik42" style="color: #405DE6;"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/ritikkumarpandit7" style="color: #211F1F;"><i class="fab fa-github"></i></a>
-            <a href="https://wa.me/+918873095325" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://twitter.com/heroritik42" style="color: #1DA1F2;"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="profile-image">
+    <img src="https://i.postimg.cc/RVKLyKnm/IMG-20250611-200228-643.jpg" alt="IMG" width="300" height="300">
   </div>
 
+  <div class="sidenav">
+    <div class="name">-----------------------------------------------------</div>
+    <div class="name">Learning:</div>
+    <div class="job">Web Developer</div>
+    <div class="job">App Developer</div>
+    <div class="job">Cyber Security</div>
+    <div class="name">-----------------------------------------------------</div>
+  </div>
+
+  <div class="main">
+
+    <div class="card">
+      <div class="card-body">
+        <h2><b>IDENTITY</b></h2>
+        <table>
+          <tr><td><b>Name</b></td><td>:</td><td style="color: red;"><b>Hero Ritik</b></td></tr>
+          <tr><td><b>Email</b></td><td>:</td><td style="color: red;"><b>ritikkumarpandit7@gmail.com</b></td></tr>
+          <tr><td><b>Address</b></td><td>:</td><td style="color: red;"><b>India, Bihar</b></td></tr>
+          <tr><td><b>Hobbies</b></td><td>:</td><td style="color: red;"><b>Using Phone And Hack Games</b></td></tr>
+          <tr><td><b>Skill</b></td><td>:</td>
+            <td><marquee style="color: Red;" scrollamount="10"><b>PHP, HTML, CSS, Java, C++, Node, Bash</b></marquee></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h2><b>Some Useful Websites:</b></h2>
+        <table>
+          <tr><td><b><a href="https://mr-risov.github.io/blog" target="_blank">Blog</a></b></td><td>:</td><td style="color: red;">Learn new things for free.</td></tr>
+          <tr><td><b><a href="https://mr-risov.github.io/flysian-Store" target="_blank">Store</a></b></td><td>:</td><td style="color: red;">Buy tools, software, courses.</td></tr>
+          <tr><td><b><a href="https://mr-risov.github.io/socialservices/" target="_blank">Panel</a></b></td><td>:</td><td style="color: red;">Get followers, likes, comments.</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h2>SOCIAL MEDIA</h2>
+        <div class="social-media">
+          <a href="https://instagram.com/hacker_attitude42" style="color: #405DE6;"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/heroritik42" style="color: #211F1F;"><i class="fab fa-github"></i></a>
+          <a href="https://wa.me/918873095325" style="color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Matrix Background Script -->
   <script>
     function incrementVisitCount() {
       let visitCount = localStorage.getItem('visitCount') || 0;
@@ -176,42 +181,44 @@
       document.getElementById('visitCounter').innerHTML = `Visits: ${visitCount}`;
     }
     incrementVisitCount();
-  </script>
 
-  <script>
     var canvas = document.createElement('canvas'),
         ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     document.body.appendChild(canvas);
-    var letters = '0123'.split('');
-    var fontSize = 10;
-    var columns = Math.floor(canvas.width / fontSize);
+
+    var letters = '0123456789ABCDEF';
+    letters = letters.split('');
+    var fontSize = 14;
+    var columns = canvas.width / fontSize;
     var drops = [];
-    for (var i = 0; i < columns; i++) drops[i] = 1;
+    for (var x = 0; x < columns; x++) drops[x] = 1;
+
     function draw() {
-      ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = '#0f0';
       ctx.font = fontSize + 'px monospace';
       for (var i = 0; i < drops.length; i++) {
         var text = letters[Math.floor(Math.random() * letters.length)];
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) drops[i] = 0;
         drops[i]++;
-        if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
-          drops[i] = 0;
-        }
       }
     }
     setInterval(draw, 33);
   </script>
 
+  <!-- Audio Script -->
   <audio id="sec">
     <source src="https://xmr4n0nx.github.io/Kadam%20Kadam%20Badhaye%20Ja.mp3" type="audio/mpeg">
   </audio>
   <script>
-    var x = document.getElementById("sec");
-    function playAudio() { x.play(); }
+    function playAudio() {
+      var x = document.getElementById("sec");
+      x.play();
+    }
   </script>
 </body>
-</html>
+      </html>
